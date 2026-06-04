@@ -1,3 +1,4 @@
+// Trigger Vercel rebuild with new environment variables
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
