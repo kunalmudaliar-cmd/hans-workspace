@@ -1307,3 +1307,183 @@ html, body {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
+
+/* ==========================================================================
+   Mobile Responsiveness (Screens < 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    width: calc(100% - 32px);
+    margin: 12px auto;
+  }
+
+  .nav-brand {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* General containers */
+  .container {
+    padding: 0 16px;
+    gap: 20px;
+  }
+
+  /* Dashboard Welcome */
+  .dashboard-welcome {
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-subtitle {
+    font-size: 0.88rem;
+  }
+
+  /* Metrics Grid */
+  .dashboard-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Dashboard Overview Columns */
+  .dashboard-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dashboard-action-panel,
+  .dashboard-list-panel {
+    padding: 16px;
+  }
+
+  /* Products Header Row */
+  .products-header-row {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .products-title {
+    font-size: 1.4rem;
+  }
+
+  .products-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .products-add-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Products Filters */
+  .products-filter-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .products-search-container {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .products-category-dropdown {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .products-filter-select {
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  /* Products Grid */
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Categories page */
+  .categories-split-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .categories-left-panel,
+  .categories-right-panel {
+    padding: 16px;
+  }
+
+  .categories-item {
+    padding: 12px;
+  }
+
+  /* Modal Dialog overlays */
+  .modal-overlay {
+    padding: 16px;
+  }
+
+  .modal-content {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .modal-upload-options {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .modal-file-btn,
+  .modal-real-file-input,
+  .modal-file-input-wrapper {
+    width: 100%;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+  }
+}
+
