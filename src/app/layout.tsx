@@ -22,7 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <div className="main-content-wrapper">
+          {children}
+        </div>
+        <footer className="footer-credits">
+          Developed by Kunal mudaliar
+        </footer>
       </body>
     </html>
   );
