@@ -594,6 +594,8 @@ export default function ProductsPage() {
               </button>
             </div>
           </div>
+        </div>
+      )}
       {/* IMAGE PREVIEW LIGHTBOX */}
       {previewImageUrl && (
         <div className="modal-overlay animate-fade-in" onClick={() => setPreviewImageUrl(null)}>
