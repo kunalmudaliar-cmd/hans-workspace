@@ -126,12 +126,12 @@ html, body {
 }
 
 .nav-logo-img {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  object-fit: cover;
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
   border: 1px solid var(--border-color);
   background: var(--bg-surface);
+  display: block;
 }
 
 .nav-title {
@@ -342,14 +342,14 @@ html, body {
 }
 
 .auth-logo-img {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  object-fit: cover;
+  height: 64px;
+  width: auto;
+  border-radius: 8px;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   background: var(--bg-surface);
+  display: block;
 }
 
 .auth-title {
