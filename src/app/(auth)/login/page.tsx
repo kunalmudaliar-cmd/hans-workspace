@@ -47,9 +47,7 @@ export default function LoginPage() {
     <div className="auth-page-container animate-fade-in">
       <div className="auth-card panel animate-slide-up">
         <div className="auth-header">
-          <div className="auth-logo">
-            <span>H</span>
-          </div>
+          <img src="/logo.jpeg" alt="HANS Logo" className="auth-logo-img" />
           <h1 className="auth-title">HANS</h1>
           <p className="auth-subtitle">Enter your email and password to access your workspace</p>
         </div>

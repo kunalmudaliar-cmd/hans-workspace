@@ -92,6 +92,10 @@ export default function ProductsPage() {
   const [deleteProductId, setDeleteProductId] = useState<string | null>(null);
   const [deleteLoading, setDeleteLoading] = useState(false);
 
+  // Lightbox Image Preview state
+  const [previewImageUrl, setPreviewImageUrl] = useState<string | null>(null);
+  const [previewImageName, setPreviewImageName] = useState<string>('');
+
   const router = useRouter();
 
   const triggerNotification = (message: string, type: 'success' | 'error') => {
@@ -363,7 +367,15 @@ export default function ProductsPage() {
           <div className="products-grid">
             {products.map((product) => (
               <div key={product.id} className="panel-card products-card animate-slide-up">
-                <div className="products-image-container">
+                <div 
+                  className={`products-image-container ${product.image_url ? 'clickable' : ''}`}
+                  onClick={() => {
+                    if (product.image_url) {
+                      setPreviewImageUrl(product.image_url);
+                      setPreviewImageName(product.name);
+                    }
+                  }}
+                >
                   {product.image_url ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
@@ -580,6 +592,23 @@ export default function ProductsPage() {
               >
                 {deleteLoading ? 'Removing...' : 'Delete Product'}
               </button>
+            </div>
+          </div>
+      {/* IMAGE PREVIEW LIGHTBOX */}
+      {previewImageUrl && (
+        <div className="modal-overlay animate-fade-in" onClick={() => setPreviewImageUrl(null)}>
+          <div className="modal-content panel animate-slide-up modal-dialog-image" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h2 className="modal-title-small">{previewImageName}</h2>
+              <button onClick={() => setPreviewImageUrl(null)} className="modal-close-btn">
+                <svg className="modal-close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="image-preview-modal-body">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={previewImageUrl} alt={previewImageName} className="lightbox-image" />
             </div>
           </div>
         </div>

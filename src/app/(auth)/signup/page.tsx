@@ -8,9 +8,7 @@ export default function SignupPage() {
     <div className="auth-page-container animate-fade-in">
       <div className="auth-card panel animate-slide-up">
         <div className="auth-header">
-          <div className="auth-logo">
-            <span>H</span>
-          </div>
+          <img src="/logo.jpeg" alt="HANS Logo" className="auth-logo-img" />
           <h1 className="auth-title">Registration Closed</h1>
           <p className="auth-subtitle">Workspace account creation is disabled for this HANS demo vault.</p>
         </div>

@@ -31,7 +31,7 @@ export default function Navigation() {
   return (
     <nav className="navbar panel">
       <div className="nav-brand">
-        <div className="nav-logo">H</div>
+        <img src="/logo.jpeg" alt="HANS Logo" className="nav-logo-img" />
         <h1 className="nav-title">HANS</h1>
       </div>
       <div className="nav-links">
